@@ -23,6 +23,7 @@
 <img alt="Image" src="">
 
 <input name="b" placeholder="Input Something" type="text">
+<input id="type" placeholder="text typing" type="text">
 <button>Test</button>
 
 <ul>
@@ -82,6 +83,10 @@
     });
 
 
+    // Display typed text on the h1 while typing
+    document.querySelector("#type").addEventListener("keyup", function () {
+        console.log("hello")
+    });
 
 
 </script>
