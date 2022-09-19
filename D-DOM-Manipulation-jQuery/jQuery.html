@@ -26,7 +26,17 @@
     // document.querySelector("h1").style.color='red';//js way
     $('h1').css('color','red');
 
-    $('h1');// this is how to select a element in jQuery
+    $('h1');// this is how to select an element in jQuery
+
+
+    /*we can also chanage the selector as we wanted*/
+    var RS =jQuery.noConflict();
+
+    // $()// not recognised
+
+    // RS(); now you have to use this way to select element
+
+    RS("h2").css('color','green');
 
 
 </script>
