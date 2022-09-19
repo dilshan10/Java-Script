@@ -5,7 +5,7 @@
     <title>jQuery</title>
 </head>
 <body>
-<h1>jQuery..!</h1>
+<h1 id="firstH1">jQuery..!</h1>
 <h1>jQuery..Hello</h1>
 <h2>What is jQuery and How it works.?</h2>
 <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aliquam architecto assumenda blanditiis
@@ -66,7 +66,14 @@
 
 
     //how to remove an element from dom using jQuery
-    $('h1').remove(); // this is how to do it using jQuery
+    // $('h1').remove(); // this is how to do it using jQuery
+
+    //how to get the text of an element
+    $("#firstH1").text(); // return the text of selected h1
+
+    //how to set the text of an element
+    $("#firstH1").text("Institute of Java and Software Engineering");// this is how to change a text in an element
+
 
 
 
