@@ -14,13 +14,13 @@
 </head>
 <body>
 
-<img alt="" src="https://blog.ijse.lk/web/blog/wp-content/uploads/2019/09/IMG_2086.jpg">
-<img alt=""
+<img id="imgOne" alt="" src="https://blog.ijse.lk/web/blog/wp-content/uploads/2019/09/IMG_2086.jpg">
+<img id="imgTwo" alt=""
      src="https://blog.ijse.lk/web/blog/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-24-at-12.29.48-PM-1-1-1024x574.jpeg">
-<img alt="" src="https://blog.ijse.lk/web/blog/wp-content/uploads/2019/09/IMG_1664.jpg">
-<button>Image One</button>
-<button>Image Two</button>
-<button>Image Three</button>
+<img id="imgThree" alt="" src="https://blog.ijse.lk/web/blog/wp-content/uploads/2019/09/IMG_1664.jpg">
+<button id="btnOne">Image One</button>
+<button id="btnTwo">Image Two</button>
+<button id="btnThree">Image Three</button>
 
 <h1>Hello Java Script</h1>
 <h1 id="h1ID" name="a">Hello Java Script</h1>
@@ -107,6 +107,30 @@
     /* when button One is clicked Image One Should hide and rest of images should be displayed*/
     /* when button Two is clicked Image Two Should hide and rest of images should be displayed*/
     /* when button Three is clicked Image Three Should hide and rest of images should be displayed*/
+
+    //01 select three button
+    /*document.getElementById("btnOne");
+    document.getElementById("btnTwo");
+    document.getElementById("btnThree");*/
+
+    //02. Bind click events for those buttons
+    document.getElementById("btnOne").addEventListener("click",function(){
+        document.getElementById("imgOne").style.display='none';
+        document.getElementById("imgTwo").style.display='inline-block';
+        document.getElementById("imgThree").style.display='inline-block';
+    });
+
+    document.getElementById("btnTwo").addEventListener("click",function(){
+        document.getElementById("imgOne").style.display='inline-block';
+        document.getElementById("imgTwo").style.display='none';
+        document.getElementById("imgThree").style.display='inline-block';
+    });
+
+    document.getElementById("btnThree").addEventListener("click",function(){
+        document.getElementById("imgOne").style.display='inline-block';
+        document.getElementById("imgTwo").style.display='inline-block';
+        document.getElementById("imgThree").style.display='none';
+    });
 
 
 
