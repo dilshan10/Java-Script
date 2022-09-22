@@ -19,10 +19,11 @@
 <header class="jumbotron bg-primary text-white p-3">
     <h1 class="position-absolute" id="nav"></h1>
     <ul class="list-group list-group-horizontal text-danger justify-content-end font-weight-bold">
-        <li class="list-group-item bg-danger text-white" id="lnkHome"><a class="text-white" href="index.html">Home</a></li>
-        <li class="list-group-item bg-white" id="lnkCustomer"><a href="pages/customer.html">Customer</a></li>
-        <li class="list-group-item bg-white" id="lnkItem"><a href="pages/item.html">Item</a></li>
-        <li class="list-group-item bg-white" id="lnkOrders"><a href="pages/purchase-order.html">Orders</a></li>
+        <li class="list-group-item bg-danger text-white" id="lnkHome"><a class="text-white" href="#" id="home">Home</a>
+        </li>
+        <li class="list-group-item bg-white" id="lnkCustomer"><a href="#" id="customer">Customer</a></li>
+        <li class="list-group-item bg-white" id="lnkItem"><a href="#" id="item">Item</a></li>
+        <li class="list-group-item bg-white" id="lnkOrders"><a href="#" id="order">Orders</a></li>
     </ul>
 </header>
 
@@ -387,5 +388,38 @@
 
 
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+
+
+    $("#home").click(function () {
+        $("#dashboardContent").css('display','block');
+        $("#customerContent").css('display','none');
+        $("#itemContent").css('display','none');
+        $("#orderContent").css('display','none');
+    });
+
+    $("#customer").click(function () {
+        $("#dashboardContent").css('display','none');
+        $("#customerContent").css('display','block');
+        $("#itemContent").css('display','none');
+        $("#orderContent").css('display','none');
+    });
+
+    $("#item").click(function () {
+        $("#dashboardContent").css('display','none');
+        $("#customerContent").css('display','none');
+        $("#itemContent").css('display','block');
+        $("#orderContent").css('display','none');
+    });
+
+    $("#order").click(function () {
+        $("#dashboardContent").css('display','none');
+        $("#customerContent").css('display','none');
+        $("#itemContent").css('display','none');
+        $("#orderContent").css('display','block');
+    });
+</script>
 </body>
 </html>

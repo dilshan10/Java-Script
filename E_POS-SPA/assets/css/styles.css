@@ -4,6 +4,11 @@
 *{
     font-family: 'Titillium Web', sans-serif;
 }
+
+#customerContent,#itemContent,#orderContent{
+    display: none;
+}
+
 #title-text{
     color: #1b5e20;
     font-size: 2em;
