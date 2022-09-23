@@ -94,9 +94,28 @@
     // var x = 100;
     // console.log(x);//100
 
-    let myName='Kasun';
+
+    /*What are the other ways that we have to create variables in JS*/
+    let myName='Kasun'; // variables with let declaration
     console.log(myName);
 
+    // So, What's new about let.?
+    //let myName="Nimal"; // Error //Identifier 'myName' has already been declared
+
+
+    // So, what about scope problem
+    {
+        console.log(myName);
+        let myAge=10;
+    }
+    // console.log(myAge); // error // now this is not accessible
+
+
+
+
+
+    // In let declaration we cannot duplicate identifiers
+    // Scope is satisfied
 
 
 </script>
