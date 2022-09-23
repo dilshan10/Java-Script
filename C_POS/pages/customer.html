@@ -85,6 +85,7 @@
 <script src="../assets/js/bootstrap.min.js"></script>
 <script>
     //select the save button and bind a click event for it
+
     $("#btnCustomer").click(function () {
 
         //select all the four text fields and then get their typed values
@@ -93,11 +94,18 @@
         let customerAddress = $("#txtCustomerAddress").val();
         let customerSalary = $("#txtCustomerSalary").val();
 
-        alert(customerID+" "+ customerName+" "+customerAddress+" "+customerSalary);
+        // alert(customerID+" "+ customerName+" "+customerAddress+" "+customerSalary);
 
         //Put all of these values inside a named container
         // customer
 
+        var customerObject = {
+            id: customerID,
+            name: customerName,
+            address: customerAddress,
+            salary: customerSalary
+        }
+        console.log(customerObject);
 
 
     });
