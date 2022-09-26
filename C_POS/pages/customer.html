@@ -118,6 +118,9 @@
 
 
     $("#btnGetAll").click(function (){
+        //remove all the table body content before adding data
+        $("#tblCustomer").empty();
+
 
         // get all customer records from the array
         for(var customer of customers){
