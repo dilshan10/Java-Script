@@ -135,12 +135,12 @@
     // $('#d').parents('section').eq(0).children(":eq(0)").children('h1').css('color','red');
 
     // Change color of CMJD list by using traversing
-    $('#d').parent().children('div').children().children().children('ul').children(":nth-child(2)").css('color','red');
+    // $('#d').parent().children('div').children().children().children('ul').children(":nth-child(2)").css('color','red');
 
 
     // Find. ?
-    // can find a child of a parent
-
+    // can find children of a parent
+    $('body').find('ul').remove(); // remove all the ul inside the body
 
 
 </script>
