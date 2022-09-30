@@ -5,6 +5,7 @@
     <title>Traversing With JS</title>
 </head>
 <body>
+
 <h1>Traversing With JS</h1>
 <ul>
     <li>A</li>
@@ -49,6 +50,29 @@
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
+
+    /*Methods that we can use for traversing*/
+    /*
+    * children();
+    * parent();
+    * parents();
+    * find();
+    * get();
+    * eq();
+    * children(":nth-child(1)")
+    * children(":eq(1)")
+    * */
+
+
+    //children
+    $('body').children();
+    //return all the root children of selected element
+
+    $('html').children();
+
+    //then how to select one of the child
+    $('body').children('ul'); // select one from children
+
 
 </script>
 </body>
