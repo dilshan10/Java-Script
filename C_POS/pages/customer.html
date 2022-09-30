@@ -86,7 +86,7 @@
 <script>
     //select the save button and bind a click event for it
 
-    var customers=[]; // global scope (Store all the customer records)
+    var customers = []; // global scope (Store all the customer records)
 
     $("#btnCustomer").click(function () {
         //local scope // function scope
@@ -119,26 +119,26 @@
     });
 
 
-    $("#btnGetAll").click(function (){
+    $("#btnGetAll").click(function () {
         loadAllCustomers();
     });
 
 
     //load all customers
-    function loadAllCustomers(){
+    function loadAllCustomers() {
         //remove all the table body content before adding data
         $("#tblCustomer").empty();
 
 
         // get all customer records from the array
-        for(var customer of customers){
+        for (var customer of customers) {
             console.log(customer);// customer object
 
             // add those data to the table row
             // var row= "<tr><td>"+customer.id+"</td><td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>";
 
             // Using String Literals to do the same thing as above
-            var row= `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+            var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
 
             //then add it to the table body of customer table
             $("#tblCustomer").append(row);
@@ -146,6 +146,27 @@
     }
 
 
+    //Set back values from table to text fields
+    $('tr'); // select all the rows
+
+    $("#tblCustomer>tr").click(function () {
+        //how to get the row we click at the moment
+        console.log(this); // we can use this // return tr dom object
+    });
+
+    //to access jQuery method we have to convert the dom object to the jQuery Object
+    $("#tblCustomer>tr").click(function () {
+        //how to get the row we click at the moment
+        console.log($(this)); // now the clicked dom object will convert into jQuery object and then will
+        // Allow you to access jQuery methods
+    });
+
+    //So let's print the row details which we clicked
+    $("#tblCustomer>tr").click(function () {
+        //how to get the row we click at the moment
+        let rowData = $(this).text(); // this will return the entire row text which is clicked
+        console.log(rowData);
+    });
 
 
 </script>
