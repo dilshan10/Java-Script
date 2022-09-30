@@ -87,7 +87,7 @@
     //element (returns DOM element not a jQuery object)
 
     // so if we try to do something like below. it will be an error
-    $('body').children().get(1).text(); //error
+    // $('body').children().get(1).text(); //error
     // we cannot access jQuery methods from a DOM object
 
     //So how to resolve the above problem
@@ -99,6 +99,34 @@
 
     // 03.
     $('body').children().eq('0').text();
+
+
+    //Recursively calling traversing methods
+
+    $('body').children();
+    // S.fn.init(6) [h1, ul, section, script, script, script, prevObject: S.fn.init(1)]
+
+    $('body').children(':eq(1)');
+    // S.fn.init [ul, prevObject: S.fn.init(1)]
+
+    $('body').children(':eq(1)').children();
+    // S.fn.init(3) [li, li, li, prevObject: S.fn.init(1)]
+
+    $('body').children(':eq(1)').children(':nth-child(2)');
+    // S.fn.init [li, prevObject: S.fn.init(1)]
+
+    $('body').children(':eq(1)').children(':nth-child(2)').text();
+
+
+    // Parents
+
+
+    // Parent
+
+
+
+    // Find
+
 
 </script>
 </body>
