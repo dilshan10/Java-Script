@@ -135,7 +135,7 @@
 
         // get all customer records from the array
         for (var customer of customers) {
-            console.log(customer);// customer object
+            // console.log(customer);// customer object
 
             // add those data to the table row
             // var row= "<tr><td>"+customer.id+"</td><td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>";
@@ -180,8 +180,14 @@
             let name = $(this).children(":eq(1)").text();
             let address = $(this).children(":eq(2)").text();
             let salary = $(this).children(":eq(3)").text();
+            // console.log(id, name, address, salary);
 
-            console.log(id, name, address, salary);
+            //setting table details values to text fields
+            $('#txtCustomerID').val(id);
+            $('#txtCustomerName').val(name);
+            $('#txtCustomerAddress').val(address);
+            $('#txtCustomerSalary').val(salary);
+
         });
     }
 
