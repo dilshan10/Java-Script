@@ -5,8 +5,29 @@
     <title>JS Events</title>
 </head>
 <body>
-<h1>JS Events</h1>
 
-<button>Test</button>
+<h1 onmouseenter="testMouseMove()">JS Events</h1>
+<h2>There are two types of events</h2>
+<ul>
+    <li>Global Events</li>
+    <li>Specified Events</li>
+</ul>
+
+<button onclick="alert('hello, I am a global event')">Test</button>
+<button onclick="testGlobalEvents()">Test</button>
+
+
+<script>
+
+function testGlobalEvents(){
+    console.log("Hello there..!")
+}
+
+function testMouseMove(){
+    alert('mouse entered on h1');
+}
+
+</script>
+
 </body>
 </html>
