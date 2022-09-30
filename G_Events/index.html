@@ -10,7 +10,7 @@
 <h2>There are two types of events</h2>
 <ul>
     <li>Global Events</li>
-    <li>Specified Events</li>
+    <li id="se">Specified Events</li>
 </ul>
 
 <button onclick="alert('hello, I am a global event')">Test</button>
@@ -18,14 +18,22 @@
 
 
 <script>
+    //Global events
+    function testGlobalEvents() {
+        console.log("Hello there..!")
+    }
 
-function testGlobalEvents(){
-    console.log("Hello there..!")
-}
+    function testMouseMove() {
+        alert('mouse entered on h1');
+    }
 
-function testMouseMove(){
-    alert('mouse entered on h1');
-}
+
+    //Specified Events
+    let li = document.getElementById("se");
+    li.addEventListener('click', function () {
+        alert('Hello, I am a specified event');
+    });
+
 
 </script>
 
