@@ -20,7 +20,8 @@
     <h1 class="position-absolute" id="nav"></h1>
     <ul class="list-group list-group-horizontal text-danger justify-content-end font-weight-bold">
         <li class="list-group-item bg-white" id="lnkHome"><a href="../index.html">Home</a></li>
-        <li class="list-group-item bg-danger text-white" id="lnkCustomer"><a class="text-white" href="CustomerPageWithEvents.html">Customer</a>
+        <li class="list-group-item bg-danger text-white" id="lnkCustomer"><a class="text-white"
+                                                                             href="CustomerPageWithEvents.html">Customer</a>
         </li>
         <li class="list-group-item bg-white" id="lnkItem"><a href="item.html">Item</a></li>
         <li class="list-group-item bg-white" id="lnkOrders"><a href="purchase-order.html">Orders</a></li>
@@ -73,7 +74,24 @@
                 </tr>
                 </thead>
                 <tbody id="tblCustomer">
-
+                <tr>
+                    <td>C001</td>
+                    <td>Dasun</td>
+                    <td>Galle</td>
+                    <td>200001</td>
+                </tr>
+                <tr>
+                    <td>C002</td>
+                    <td>Kamal</td>
+                    <td>Panadura</td>
+                    <td>30000</td>
+                </tr>
+                <tr>
+                    <td>C003</td>
+                    <td>Ramal</td>
+                    <td>Kaluthara</td>
+                    <td>40000</td>
+                </tr>
                 </tbody>
             </table>
         </div>
@@ -84,6 +102,11 @@
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script>
+
+    $('#btnCustomer').on('click', function () {
+        alert("Hello there.");
+    });
+
 
 
 </script>
