@@ -95,6 +95,7 @@
                 </tbody>
             </table>
         </div>
+        <h1 id="dis">Code</h1>
     </section>
 </main>
 
@@ -129,15 +130,19 @@
            console.log("Customer Name Field Blurred")
        });
    */
-    $("#txtCustomerID").on('keydown', function () {
+    $("#txtCustomerID").on('keydown', function (event) {
         console.log("Customer ID Field Keydown")
+        console.log(event.key); // we can use event object properties to verify which keys we are pressing
+
+        $("#dis").text(event.key);
     });
+
 
     $("#txtCustomerID").on('keyup', function () {
         console.log("Customer ID Field Keyup")
     });
 
-    $("#txtCustomerID").on('keypress', function () {
+    $("#txtCustomerID").on('keypress', function () { // this event doesn't work on all keys
         console.log("Customer ID Field keypress")
     });
 
