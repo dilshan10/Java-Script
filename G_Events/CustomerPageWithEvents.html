@@ -135,31 +135,41 @@
 
 
 
- /*   $("#txtCustomerID").on('keydown', function (event) {
-        console.log("Customer ID Field Keydown")
-        console.log(event.key); // we can use event object properties to verify which keys we are pressing
+    /*   $("#txtCustomerID").on('keydown', function (event) {
+           console.log("Customer ID Field Keydown")
+           console.log(event.key); // we can use event object properties to verify which keys we are pressing
 
-        $("#dis").text(event.key);
-    });
+           $("#dis").text(event.key);
+       });
 
 
-    $("#txtCustomerID").on('keyup', function () {
-        console.log("Customer ID Field Keyup")
-    });
+       $("#txtCustomerID").on('keyup', function () {
+           console.log("Customer ID Field Keyup")
+       });
 
-    $("#txtCustomerID").on('keypress', function () { // this event doesn't work on all keys
-        console.log("Customer ID Field keypress")
-    });*/
-
+       $("#txtCustomerID").on('keypress', function () { // this event doesn't work on all keys
+           console.log("Customer ID Field keypress")
+       });*/
 
 
     $("#txtCustomerID").on('keydown', function (event) {
-        $("#dis").text(event.key);
-
-        if(event.key=="Enter"){
-            alert("You pressed enter key");
+        if (event.key == "Enter") {
+            $("#txtCustomerName").focus();
         }
+    });
 
+
+
+    $("#txtCustomerName").on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $("#txtCustomerAddress").focus();
+        }
+    });
+
+    $("#txtCustomerAddress").on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $("#txtCustomerSalary").focus();
+        }
     });
 
 </script>
