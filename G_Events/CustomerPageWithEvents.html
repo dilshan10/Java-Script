@@ -32,7 +32,7 @@
 <main class="container-fluid" id="customerContent">
     <section class="row">
         <div class="col-4">
-            <h1>Customer Registraion</h1>
+            <h1 id="heading">Customer Registraion</h1>
 
             <div class="form-group">
                 <label for="txtCustomerID">Customer ID</label>
@@ -95,7 +95,7 @@
                 </tbody>
             </table>
         </div>
-        <h1 id="dis">Code</h1>
+        <!--        <h1 id="dis">Code</h1>-->
     </section>
 </main>
 
@@ -152,11 +152,16 @@
        });*/
 
 
-    $("#txtCustomerID").on('keydown', function (event) {
-        if (event.key=="Tab"){
+
+    //disable tab key of all four text fields using grouping selector in CSS
+    $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on('keydown', function (event) {
+        if (event.key == "Tab") {
             event.preventDefault();
         }
+    });
 
+
+    $("#txtCustomerID").on('keydown', function (event) {
         if (event.key == "Enter") {
             $("#txtCustomerName").focus();
         }
@@ -176,9 +181,34 @@
 
     $("#txtCustomerSalary").on('keydown', function (event) {
         if (event.key == "Enter") {
-           confirm("Do you want to add this customer.?");
+            confirm("Do you want to add this customer.?");
         }
     });
+
+
+    //What we can do with mouse events
+    $("#heading").on('mousedown', function () {
+        console.log("Mouse Down")
+    });
+
+    $("#heading").on('mouseup', function () {
+        console.log("Mouse Up")
+    });
+
+    $("#heading").on('mousemove', function () {
+        console.log("Mouse Move")
+    });
+
+    $("#heading").on('click', function () {
+        console.log("Click")
+    });
+
+
+    //Move text with mouse pointer
+    $(window).on('mousemove', function (event) {
+        console.log(event.pageX,event.pageY);
+    });
+
 
 </script>
 </body>
