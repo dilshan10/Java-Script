@@ -153,6 +153,10 @@
 
 
     $("#txtCustomerID").on('keydown', function (event) {
+        if (event.key=="Tab"){
+            event.preventDefault();
+        }
+
         if (event.key == "Enter") {
             $("#txtCustomerName").focus();
         }
