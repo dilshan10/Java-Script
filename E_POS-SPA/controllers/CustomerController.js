@@ -4,7 +4,6 @@
  **/
     //select the save button and bind a click event for it
 
-var customers = []; // global scope (Store all the customer records)
 
 //Button Events
 $("#btnCustomer").click(function () {
