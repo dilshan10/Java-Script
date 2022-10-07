@@ -146,14 +146,14 @@
 
     $("#txtCustomerName").on('keydown', function (event) {
         if (event.key == "Enter" && check(cusNameRegEx, $("#txtCustomerName"))) {
-            $("#txtCustomerAddress").focus();
+            focusText($("#txtCustomerAddress"));
         }
     });
 
 
     $("#txtCustomerAddress").on('keydown', function (event) {
         if (event.key == "Enter" && check(cusAddressRegEx, $("#txtCustomerAddress"))) {
-            $("#txtCustomerSalary").focus();
+            focusText($("#txtCustomerSalary"));
         }
     });
 
@@ -171,7 +171,7 @@
     function checkValidity() {
         let errorCount=0;
         for (let validation of customerValidations) {
-            if (validation.reg.test(validation.field.val())) {
+            if (check(validation.reg,validation.field)) {
                 textSuccess(validation.field,"");
             } else {
                 errorCount=errorCount+1;
@@ -193,7 +193,6 @@
             txtField.css('border', '2px solid red');
             txtField.parent().children('span').text(error);
         }
-
     }
 
     function textSuccess(txtField,error) {

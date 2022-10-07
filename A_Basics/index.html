@@ -664,7 +664,7 @@
     //This is also a reason which, js is known to have first class functions
     // We can pass functions as parameters of another functions
 
-    function createMessage(content1,content2){
+    /*function createMessage(content1,content2){
         return content1()+content2;
     }
 
@@ -673,7 +673,23 @@
     }
 
     let output=createMessage(myName," is a software Developer..!");
-    console.log(output);
+    console.log(output);*/
+
+
+
+    // we can return a function in a function
+    // This is also a reason to say that js have first class functions
+
+
+    function getMyData(){
+        return function getData(){
+            console.log("My Name Is IJSE")
+        }
+    }
+
+    getMyData()(); // how to call that returned function
+
+
 
 
 
