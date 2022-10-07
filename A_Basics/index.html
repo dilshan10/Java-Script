@@ -575,13 +575,53 @@
     * How to write reguler expressions using js
     * */
 
-    var cusID = /^(C)[0-9]{3}$/; // this is a js literal (regex literal)
-    typeof cusID;// Object
+    /*  var cusID = /^(C)[0-9]{3}$/; // this is a js literal (regex literal)
+      typeof cusID;// Object
 
-    // how to check a string with regex
-    var result = cusID.test("C001");// return boolean
-    console.log(result);
+      // how to check a string with regex
+      var result = cusID.test("C001");// return boolean
+      console.log(result);*/
 
+
+
+    // functions furthermore
+
+    test();
+
+    function test() {
+        console.log("Hello");
+        console.log("How");
+        console.log("Are");
+        console.log("You");
+    }
+
+
+    // we can write a function in two types
+    // Function Declaration
+    function getMyName() {
+        console.log("My Name Is Dasun")
+    }
+
+    getMyName();
+
+
+    //Expression
+    //we can assign a function for a variable
+    //This is also a reason for demonstrating JS has a first level functions
+    let myAge = function () {
+        return 30;
+    }
+
+    myAge();
+
+
+    // functions arguments
+    function calculateMyNumbers(i, s) {
+        return i + s;
+    }
+
+    let output = calculateMyNumbers(10, 120);
+    console.log(output);
 
 
 </script>
