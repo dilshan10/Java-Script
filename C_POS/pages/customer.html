@@ -191,6 +191,21 @@
         });
     }
 
+    $("#txtCustomerID").on('keyup', function (event) {
+        if (event.code == "Enter") {
+            let typedId = $("#txtCustomerID").val();
+            let customer = searchCustomer(typedId);
+            if (customer != null) {
+                $("#txtCustomerID").val(customer.id);
+                $("#txtCustomerName").val(customer.name);
+                $("#txtCustomerAddress").val(customer.address);
+                $("#txtCustomerSalary").val(customer.salary);
+            } else {
+                alert("There is no cusotmer available for that " + typedId);
+            }
+        }
+    });
+
 
     function searchCustomer(cusID) {
         for (let customer of customers) {
