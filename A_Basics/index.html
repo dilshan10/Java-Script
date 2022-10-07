@@ -586,42 +586,81 @@
 
     // functions furthermore
 
-    test();
-
-    function test() {
-        console.log("Hello");
-        console.log("How");
-        console.log("Are");
-        console.log("You");
-    }
+    // test();
+    //
+    // function test() {
+    //     console.log("Hello");
+    //     console.log("How");
+    //     console.log("Are");
+    //     console.log("You");
+    // }
 
 
     // we can write a function in two types
+    //01. Function Declaration
+    //02. Function Expression
+
     // Function Declaration
-    function getMyName() {
-        console.log("My Name Is Dasun")
-    }
+    // getMyName();
+    // function getMyName() {
+    //     console.log("My Name Is Dasun")
+    // }
 
-    getMyName();
 
-
-    //Expression
+    //Function Expression
     //we can assign a function for a variable
     //This is also a reason for demonstrating JS has a first level functions
-    let myAge = function () {
-        return 30;
+    // let myAge = function () {
+    //     return 30;
+    // }
+    // myAge();
+
+
+    //So what about function arguments
+    //functions arguments
+    // function calculateMyNumbers(i,s) {
+    //     console.log(i,s);
+    //     return i + s;
+    // }
+    //
+    // let output = calculateMyNumbers(10,20);
+    // console.log(output);
+
+
+
+    // What about method Overloading
+    // Is it working in JS.?
+
+    // function getMyAddress(country,city){
+    //     console.log("First Method Invoked with Two Para");
+    //     console.log(country,city);
+    // }
+    //
+    // function getMyAddress(country){
+    //     console.log("Second Method Invoked with One Para");
+    //     console.log(country);
+    // }
+    //
+    // getMyAddress("Sri Lanka","Galle");
+    //Here overloading is not supporting
+    //When there are two or more methods with the same
+    //name it gets the last method
+
+
+
+
+    //How arguments work in JS functions
+    // In js all arguments are stored in an array called arguments
+    function calculateMySalary(i,message){
+        console.log(arguments); // predefined variable to store params values
+        console.log(arguments[0]); // we can access param values with index numbers using arguments array
+        console.log("Method Invoked",i,message);
     }
 
-    myAge();
+    calculateMySalary(20,"Hello");
 
 
-    // functions arguments
-    function calculateMyNumbers(i, s) {
-        return i + s;
-    }
 
-    let output = calculateMyNumbers(10, 120);
-    console.log(output);
 
 
 </script>
