@@ -681,13 +681,35 @@
     // This is also a reason to say that js have first class functions
 
 
-    function getMyData(){
-        return function getData(){
-            console.log("My Name Is IJSE")
-        }
+    // function getMyData(){
+    //     return function getData(){
+    //         console.log("My Name Is IJSE")
+    //     }
+    // }
+    //
+    // getMyData()(); // how to call that returned function
+
+
+
+
+    // Object to Continue
+    //Literal Base Object
+    var myOb={
+        id:"C001", // key value pairs
+        name:"Kasun"
     }
 
-    getMyData()(); // how to call that returned function
+    console.log(myOb);
+    //don notation and  bracket notation
+    //how to get values form an object
+    myOb.id;// C001
+    myOb.name//Kasun
+
+    //can we change C001 to C00-001
+    myOb.id='C00-001';
+    myOb.name='Akila';
+
+    console.log(myOb);
 
 
 

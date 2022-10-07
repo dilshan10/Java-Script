@@ -88,6 +88,7 @@
 
     var customers = []; // global scope (Store all the customer records)
 
+    //Button Events
     $("#btnCustomer").click(function () {
         //local scope // function scope
 
@@ -121,19 +122,30 @@
 
     });
 
-    $("#btnCusDelete").click(function (){
-        let deleteID=$("#txtCustomerID").val();
-        if (deleteCustomer(deleteID)){
+    $("#btnCusDelete").click(function () {
+        let deleteID = $("#txtCustomerID").val();
+        if (deleteCustomer(deleteID)) {
             alert("Customer Successfully Deleted..");
             setTextfieldValues("", "", "", "");
-        }else{
+        } else {
             alert("No such customer to delete. please check the id");
         }
     });
 
-
     $("#btnGetAll").click(function () {
         loadAllCustomers();
+    });
+
+    $("#btnUpdate").click(function () {
+        let customerID = $("#txtCustomerID").val();
+        let response = updateCustomer(customerID);
+        if (response) {
+            alert("Customer Updated Successfully");
+            setTextfieldValues("","","","");
+        } else {
+            alert("Update Failed..!");
+
+        }
     });
 
 
@@ -232,7 +244,6 @@
         return null;
     }
 
-
     function deleteCustomer(customerID) {
         let customer = searchCustomer(customerID);
         if (customer != null) {
@@ -240,9 +251,24 @@
             customers.splice(indexNumber, 1);
             loadAllCustomers();
             return true;
-        }else{
+        } else {
             return false;
         }
+    }
+
+    function updateCustomer(customerID) {
+        let customer = searchCustomer(customerID);
+        if (customer != null) {
+            customer.id = $("#txtCustomerID").val();
+            customer.name = $("#txtCustomerName").val();
+            customer.address = $("#txtCustomerAddress").val();
+            customer.salary = $("#txtCustomerSalary").val();
+            loadAllCustomers();
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
 </script>
