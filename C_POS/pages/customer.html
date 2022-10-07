@@ -124,12 +124,17 @@
 
     $("#btnCusDelete").click(function () {
         let deleteID = $("#txtCustomerID").val();
-        if (deleteCustomer(deleteID)) {
-            alert("Customer Successfully Deleted..");
-            setTextfieldValues("", "", "", "");
-        } else {
-            alert("No such customer to delete. please check the id");
+
+        let option = confirm("Do you really want to delete " + deleteID);
+        if (option){
+            if (deleteCustomer(deleteID)) {
+                alert("Customer Successfully Deleted..");
+                setTextfieldValues("", "", "", "");
+            } else {
+                alert("No such customer to delete. please check the id");
+            }
         }
+
     });
 
     $("#btnGetAll").click(function () {
@@ -141,7 +146,7 @@
         let response = updateCustomer(customerID);
         if (response) {
             alert("Customer Updated Successfully");
-            setTextfieldValues("","","","");
+            setTextfieldValues("", "", "", "");
         } else {
             alert("Update Failed..!");
 
