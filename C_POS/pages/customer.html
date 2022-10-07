@@ -125,7 +125,7 @@
     $("#btnCusDelete").click(function () {
         let deleteID = $("#txtCustomerID").val();
 
-        let option = confirm("Do you really want to delete " + deleteID);
+        let option = confirm("Do you really want to delete customer id :" + deleteID);
         if (option){
             if (deleteCustomer(deleteID)) {
                 alert("Customer Successfully Deleted..");
@@ -134,7 +134,6 @@
                 alert("No such customer to delete. please check the id");
             }
         }
-
     });
 
     $("#btnGetAll").click(function () {
